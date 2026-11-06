@@ -6,8 +6,8 @@ def parse_log(line):
     pattern = (
         r"(\w+\s+\d+\s+\d+:\d+:\d+)\s+"
         r"(\S+)\s+sshd\[(\d+)\]:\s+"
-        r"(Failed password|Accepted password|Invalid user)"
-        r"(?: for (?:invalid user )?(\S+))?"
+        r"(Failed password|Accepted password|Invalid user)\s+"
+        r"(?:for\s+)?(?:invalid user\s+)?(\S+)"
         r".*?from\s+(\d+\.\d+\.\d+\.\d+)"
     )
 
