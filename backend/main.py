@@ -2,12 +2,15 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from services.log_parser import parse_log
 from services.detection_engine import detect_bruteforce
+from database import engine, Base
+import models
 
 app = FastAPI(
     title="Sentinel",
     description="Security Monitoring Platform",
     version="1.0.0"
 )
+Base.metadata.create_all(bind=engine)
 
 @app.get("/")
 def home():
