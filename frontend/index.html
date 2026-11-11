@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinel | Security Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🛡️ SENTINEL</h1>
+        <p>Security Monitoring & Threat Detection</p>
+    </header>
+
+    <main>
+        <section class="stats">
+            <div class="card">
+                <h3>Total Events</h3>
+                <p id="total-events">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Alerts</h3>
+                <p id="total-alerts">0</p>
+            </div>
+
+            <div class="card">
+                <h3>High Severity</h3>
+                <p id="high-alerts">0</p>
+            </div>
+        </section>
+
+        <section class="upload">
+            <h2>Analyze Log File</h2>
+            <input type="file" id="log-file" accept=".log">
+            <button onclick="analyzeLogs()">Analyze Logs</button>
+        </section>
+
+        <section class="results">
+            <h2>Security Alerts</h2>
+            <div id="alerts-list">No alerts loaded.</div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
